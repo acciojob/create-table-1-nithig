@@ -1,5 +1,9 @@
 function insert_Row() {
-	let element = document.getElementById("sampleTable");
-	element.innerHTML = "<tr><td>New Cell1</td>
-		<td>New Cell2</td></tr>" + element.innerHTML;
+  const table = document.getElementById("sampleTable");
+
+  const newRow = table.insertRow(0);
+  const cell1 = newRow.insertCell(0);
+  const cell2 = newRow.insertCell(1);
+  cell1.innerText = "New Cell1";
+  cell2.innerText = "New Cell2";
 }
